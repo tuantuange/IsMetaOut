@@ -25,7 +25,7 @@ from tqdm import tqdm
 def parse_args():
     parser = argparse.ArgumentParser(description='PyTorch Implementation of DeepCluster')
 
-    parser.add_argument('--data', default='../data/Omniglot', help='path to dataset')
+    parser.add_argument('--data', default='./Omniglot', help='path to dataset')
     parser.add_argument('--arch', '-a', type=str, metavar='ARCH',
                         choices=['alexnet', 'vgg16', 'cnn4'], default='cnn4',
                         help='CNN architecture (default: cnn4)')
