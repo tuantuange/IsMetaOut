@@ -3,3 +3,5 @@ This is a minimalist implementation of DHMUHT ( removing all details that affect
 python main.py --algo=MAML --clustering=DBSCAN
 
 Optional parameters are MAML/ANIL, DBSCAN/Kmeans
+
+The full code and scripts will be released after the paper is accepted. Thank you for your understanding.
