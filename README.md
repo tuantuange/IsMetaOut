@@ -1,8 +1,9 @@
 # DHM-UHT
-This is a minimalist implementation of DHM-UHT ( removing all details that affect readability such as verbose, checkpoint, etc.). This version implements Unsupervised few-shot learning on the Omniglot dataset.
+This is a minimalist and high readability version of the DHM-UHT ( removing all details that affect readability such as verbose, checkpoint, etc.). These files include the necessary steps for unsupervised meta-learning and stability analysis of model training.
 
-unzip Omniglot.zip
-python main.py --algo=MAML --clustering=DBSCAN
+python omniglot_main.py --algo=MAML --clustering=DBSCAN
+python miniimagenet_main.py --algo=MAML --clustering=DBSCAN
+python domainnet_main.py --algo=ANIL --clustering=DBSCAN
 
 Optional parameters are MAML/ANIL, DBSCAN/Kmeans
 
