@@ -6,4 +6,6 @@
 #
 from .vgg16 import *
 from .alexnet import *
-from .cnn4 import *
+from .omniglotcnn import *
+from .miniimagenetcnn import *
+from .domainnet_res import *

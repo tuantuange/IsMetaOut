@@ -28,9 +28,10 @@ def pil_loader(path):
     Returns:
         Image
     """
-    with open(path, 'rb') as f:
-        img = Image.open(f)
-        return img.convert('L')
+
+    img = Image.open(path)
+
+    return img
 
 
 class ReassignedDataset(data.Dataset):
@@ -121,7 +122,7 @@ def make_graph(xb, nnn):
     return I, D
 
 
-def cluster_assign(images_lists, dataset):
+def cluster_assign(images_lists, dataset, tra):
     """Creates a dataset from clustering, with clusters as labels.
     Args:
         images_lists (list of list): for each cluster, the list of image indexes
@@ -138,14 +139,8 @@ def cluster_assign(images_lists, dataset):
         image_indexes.extend(images)
         pseudolabels.extend([cluster] * len(images))
 
-    normalize = transforms.Normalize(mean=0.5,
-                                     std=0.5)
-    t = transforms.Compose([transforms.RandomResizedCrop(28),
-                            transforms.RandomHorizontalFlip(),
-                            transforms.ToTensor(),
-                            normalize])
 
-    return ReassignedDataset(image_indexes, pseudolabels, dataset, t)
+    return ReassignedDataset(image_indexes, pseudolabels, dataset, tra)
 
 
 def run_kmeans(x, nmb_clusters):
