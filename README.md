@@ -1,6 +1,4 @@
-# DHM-UHT
-
-This is a minimalist and high readability version of the DHM-UHT ( removing all details that affect readability such as verbose, checkpoint, etc.). These files include the necessary steps for unsupervised meta-learning and stability analysis of model training.
+This is a minimalist and high readability version of the our method ( removing all details that affect readability such as verbose, checkpoint, etc.). These files include the necessary steps for unsupervised meta-learning and stability analysis of model training.
 
 Please ensure all datasets are organized in the format: dataset/class/image
 
